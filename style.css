@@ -11,16 +11,16 @@ body {
     overflow: hidden;
 }
 
-.wrapper{
+.wrapper {
     padding: 0 100px 0 100px;
     height: 100%;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-.nav{
+.nav {
     width: calc(100% - 200px);
     position: absolute;
     display: flex;
@@ -31,21 +31,22 @@ ul{
     padding: 20px 100px 0 100px;
 }
 
-.nav ul{
+.nav ul a {
     color: white;
+    text-decoration: none;
 }
 
-.logo{
+.logo {
     font-size: 40px;
     color: #ff8d00;
 }
 
-.menu-link ul li{
+.menu-link ul li {
     display: inline-block;
     padding-right: 20px;
 }
 
-.banner{
+.banner {
     position: absolute;
     right: 0;
     background-image: url('https://images.unsplash.com/photo-1609097827294-9fc0d730ecd2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHN1c2hpJTIwcmVzdGF1cmFudHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
@@ -57,32 +58,33 @@ ul{
     z-index: -1;
 }
 
-.content{
+.content {
     height: 100%;
     display: flex;
     justify-content: center;
 }
 
-.left{
+.left {
     width: 40%;
 }
-.right{
+
+.right {
     width: 60%;
 }
 
-.left{
+.left {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.tagline{
+.tagline {
     font-size: 50px;
     font-weight: 500;
     position: relative;
 }
 
-.tagline .decoration{
+.tagline .decoration {
     position: absolute;
     right: 100px;
     top: 0;
@@ -92,45 +94,45 @@ ul{
     z-index: -1;
 }
 
-.desc{
+.desc {
     font-size: 15px;
     cursor: default;
 }
 
-.desc p:nth-child(1){
+.desc p:nth-child(1) {
     margin-top: 20px;
     color: gray;
     line-height: 1.7em;
 }
 
-.desc p:nth-child(2) a{
+.desc p:nth-child(2) a {
     text-decoration: none;
 }
 
-.tagline,.desc{
+.tagline, .desc {
     opacity: 0;
     transform: translateY(50px);
 }
 
-.search{
+.search {
     margin-top: 60px;
     display: flex;
     box-shadow: 0 0 60px rgb(201, 201, 201);
 }
 
-.search input{
-    width:  70%;
+.search input {
+    width: 70%;
     height: 30px;
     border-width: 0;
     padding: 20px;
     font-size: 1.2em;
 }
 
-.search input:focus{
+.search input:focus {
     outline: 2px solid #ff8d00;
 }
 
-.search button{
+.search button {
     width: 30%;
     border-radius: 0;
     height: 70px;
@@ -139,4 +141,29 @@ ul{
     color: #FFFFFF;
     cursor: pointer;
     font-size: 1.2em;
+}
+
+/* About */
+
+.overlay {
+    position: absolute;
+    z-index: 99;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.first {
+    background: #ff8d00;
+}
+
+.second {
+    background: #ff8d00;
+    left: 33.3%;
+}
+
+.third {
+    background: #ff8d00;
+    left: 66.6%;
 }

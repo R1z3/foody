@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Foody</title>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">Foody</div>
+        <div class="menu-link">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>locations</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner"></div>
+    <div class="wrapper">
+        <div class="content">
+            <div class="left">
+                <div class="tagline">
+                    <div class="decoration"></div>
+                    Taste of Japan
+                </div>
+                <div class="desc">
+                    <p>
+                        Great for the whole family, friends or for a quick snack, our restaurants are designed with a
+                        modern, simple atmosphere that reflects the food we serve. Our delivery service will arrive
+                        promptly in elegant, practical packaging that seals in the freshness of our meals.
+                    </p>
+                </div>
+                <!-- <div class="search">
+                    <input type="text" placeholder="Enter your location">
+                    <button>Find restaurant</button>
+                </div> -->
+                <!-- <p>
+                    <a href="#">Visit us</a>
+                </p> -->
+            </div>
+            <div class="right">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+    integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+<script>
+    TweenMax.to(".banner", 1, {
+      width: "50%",
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".nav", 1, {
+      delay: 0,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.to(".tagline,.desc", 1, {
+      delay: 0.5,
+      y: "-50",
+      opacity:1,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.to(".decoration", 1, {
+      delay: 1,
+      width: "160px",
+      ease: Expo.easeInOut,
+    })
+</script>
+
+</html>

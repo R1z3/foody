@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.wrapper{
+    padding: 0 100px 0 100px;
+    height: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+.nav{
+    width: calc(100% - 200px);
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 20px 100px 0 100px;
+}
+
+.nav ul{
+    color: white;
+}
+
+.logo{
+    font-size: 40px;
+    color: #ff8d00;
+}
+
+.menu-link ul li{
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.banner{
+    position: absolute;
+    right: 0;
+    background-image: url('https://images.unsplash.com/photo-1609097827294-9fc0d730ecd2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHN1c2hpJTIwcmVzdGF1cmFudHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 0%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.content{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.left{
+    width: 40%;
+}
+.right{
+    width: 60%;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tagline{
+    font-size: 50px;
+    font-weight: 500;
+    position: relative;
+}
+
+.tagline .decoration{
+    position: absolute;
+    right: 100px;
+    top: 0;
+    width: 0px;
+    height: 40px;
+    background-color: #ff8d00;
+    z-index: -1;
+}
+
+.desc{
+    font-size: 15px;
+    cursor: default;
+}
+
+.desc p:nth-child(1){
+    margin-top: 20px;
+    color: gray;
+    line-height: 1.7em;
+}
+
+.desc p:nth-child(2) a{
+    text-decoration: none;
+}
+
+.tagline,.desc{
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.search{
+    margin-top: 60px;
+    display: flex;
+    box-shadow: 0 0 60px rgb(201, 201, 201);
+}
+
+.search input{
+    width:  70%;
+    height: 30px;
+    border-width: 0;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+.search input:focus{
+    outline: 2px solid #ff8d00;
+}
+
+.search button{
+    width: 30%;
+    border-radius: 0;
+    height: 70px;
+    border-width: 0;
+    background-color: #ff8d00;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 1.2em;
+}

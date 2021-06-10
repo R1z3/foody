@@ -70,13 +70,10 @@ ul {
     display: flex;
     justify-content: center;
     margin: auto;
+    overflow: hidden;
 }
 
 .left {
-    width: 50%;
-}
-
-.right {
     width: 50%;
 }
 
@@ -84,6 +81,18 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.right {
+    width: 50%;
+    position: relative;
+}
+
+.right img {
+    position: absolute;
+    left: -32%;
+    top: 11%;
+    transform: rotate( 140deg);
 }
 
 .tagline {
@@ -143,7 +152,6 @@ ul {
     font-size: 1.2em;
 }
 
-
 .overlay {
     position: absolute;
     z-index: 90;
@@ -202,27 +210,27 @@ ul {
     flex: 1;
 }
 
-.products{
+.products {
     position: absolute;
     bottom: 0;
     right: 0;
     width: 500px;
 }
 
-.slide-products{
+.slide-products {
     position: absolute;
     bottom: 50%;
     z-index: 90;
 }
 
-.slide-products{
+.slide-products {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
     padding: 0 10px 0 80px;
 }
 
-.slide-products *{
+.slide-products * {
     width: 100%;
     object-fit: cover;
     height: 160px;
@@ -230,7 +238,7 @@ ul {
     transform: scale(0);
 }
 
-.attention{
+.attention {
     background-color: var(--red-color);
     width: 100%;
     height: 150px;

@@ -5,6 +5,7 @@
 
 :root {
     --main-color: #a9e5ed;
+    --red-color: rgb(218, 62, 42);
 }
 
 body {
@@ -16,7 +17,6 @@ body {
 }
 
 .wrapper {
-    padding: 0 100px 0 100px;
     height: 100%;
 }
 
@@ -30,14 +30,16 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-transform: uppercase;
     font-weight: 600;
     padding: 20px 100px 0 100px;
+    z-index: 90;
 }
 
 .nav ul a {
-    color: white;
     text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: black;
 }
 
 .logo {
@@ -59,21 +61,23 @@ ul {
     background-position: center;
     width: 0%;
     height: 100vh;
-    z-index: -1;
+    z-index: 1;
 }
 
 .content {
+    width: 80%;
     height: 100%;
     display: flex;
     justify-content: center;
+    margin: auto;
 }
 
 .left {
-    width: 40%;
+    width: 50%;
 }
 
 .right {
-    width: 60%;
+    width: 50%;
 }
 
 .left {
@@ -83,29 +87,21 @@ ul {
 }
 
 .tagline {
-    font-size: 50px;
+    font-size: 6em;
     font-weight: 500;
     position: relative;
-}
-
-.tagline .decoration {
-    position: absolute;
-    right: 100px;
-    top: 0;
-    width: 0px;
-    height: 40px;
-    background-color: var(--main-color);
-    z-index: -1;
+    text-shadow: 0.06em 0.06em 0em var(--red-color);
 }
 
 .desc {
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: 600;
     cursor: default;
+    padding: 0 4em 0 4em;
 }
 
 .desc p:nth-child(1) {
-    margin-top: 20px;
-    color: gray;
+    margin-top: 4em;
     line-height: 1.7em;
 }
 
@@ -147,7 +143,6 @@ ul {
     font-size: 1.2em;
 }
 
-/* About */
 
 .overlay {
     position: absolute;
@@ -159,16 +154,16 @@ ul {
 }
 
 .first {
-    background: var(--main-color);
+    background: var(--red-color);
 }
 
 .second {
-    background: var(--main-color);
+    background: var(--red-color);
     left: 33.3%;
 }
 
 .third {
-    background: var(--main-color);
+    background: var(--red-color);
     left: 66.6%;
 }
 
@@ -182,4 +177,62 @@ ul {
 
 .loading img {
     width: 500px;
+}
+
+.background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.background * {
+    height: 100%;
+}
+
+.background .left-bg {
+    background-color: #f9f1e8;
+    width: 0%;
+}
+
+.background .right-bg {
+    flex: 1;
+}
+
+.products{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 500px;
+}
+
+.slide-products{
+    position: absolute;
+    bottom: 50%;
+    z-index: 90;
+}
+
+.slide-products{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 10px;
+    padding: 0 10px 0 80px;
+}
+
+.slide-products *{
+    width: 100%;
+    object-fit: cover;
+    height: 160px;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.attention{
+    background-color: var(--red-color);
+    width: 100%;
+    height: 150px;
+    transform: translateY(150px);
 }

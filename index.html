@@ -12,7 +12,7 @@
 
 <body>
     <div class="nav">
-        <div class="logo">Foody</div>
+        <div class="logo"></div>
         <div class="menu-link">
             <ul>
                 <li><a href="/">Home</a></li>
@@ -23,11 +23,13 @@
         </div>
     </div>
     <div class="wrapper">
-        <div class="banner"></div>
+        <div class="background">
+            <div class="left-bg"></div>
+            <div class="right-bg"></div>
+        </div>
         <div class="content">
             <div class="left">
                 <div class="tagline">
-                    <div class="decoration"></div>
                     Taste of Japan
                 </div>
                 <div class="desc">
@@ -40,14 +42,23 @@
             </div>
             <div class="right"></div>
         </div>
-        <div class="about">
+        <div class="products">
+            <div class="slide-products">
+                <img src="https://images.unsplash.com/photo-1563612116625-3012372fccce?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c3VzaGl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3VzaGl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+            </div>
+            <div class="attention"></div>
+        </div>
+        <div class="loading-overlay">
             <div class="overlay first"></div>
             <div class="overlay second"></div>
             <div class="overlay third"></div>
-            <div class="loading">
+            <!-- <div class="loading">
                 <img src="assets/images/nigiri_tuna_running.gif"
                     alt="loading">
-            </div>
+            </div> -->
         </div>
     </div>
 </body>
@@ -57,51 +68,65 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         TweenMax.to(".banner", 1, {
-            delay: 3,
+            delay: 2,
             width: "50%",
             ease: Expo.easeInOut
         })
 
         TweenMax.from(".nav", 1, {
-            delay: 2.5,
+            delay: 1.5,
             opacity: 0,
             y: 20,
             ease: Expo.easeInOut
         })
 
         TweenMax.to(".tagline,.desc", 1, {
-            delay: 2.5,
+            delay: 1.5,
             y: "-50",
             opacity: 1,
             ease: Expo.easeInOut
         })
 
-        TweenMax.to(".decoration", 1, {
-            delay: 3.5,
-            width: "160px",
-            ease: Expo.easeInOut,
+        TweenMax.to(".background .left-bg", 0.6, {
+            delay: 1.5,
+            width: "30%",
+            ease: Expo.easeInOut
         })
 
-
-        TweenMax.to(".loading", 1.2, {
-            delay:1,
-            scale: 0,
-            opacity: 0,
-            ease: Expo.easeInOut,
+        TweenMax.to(".attention", 0.6, {
+            delay: 1.5,
+            y: "0",
+            ease: Expo.easeInOut
         })
+
+        TweenMax.to(".slide-products *", .6, {
+            delay: 1.8,
+            scale: 1,
+            opacity: 1,
+            ease: Back.easeInOut
+        })
+
+        // Loading
+
+        // TweenMax.to(".loading", 1.2, {
+        //     delay:1,
+        //     scale: 0,
+        //     opacity: 0,
+        //     ease: Expo.easeInOut,
+        // })
 
         TweenMax.to(".first", 1.5, {
-            delay: 1.5,
+            delay: 0.5,
             top: "-100%",
             ease: Expo.easeInOut
         })
         TweenMax.to(".second", 1.5, {
-            delay: 1.7,
+            delay: 0.7,
             top: "-100%",
             ease: Expo.easeInOut
         })
         TweenMax.to(".third", 1.5, {
-            delay: 1.9,
+            delay: 0.9,
             top: "-100%",
             ease: Expo.easeInOut
         })
